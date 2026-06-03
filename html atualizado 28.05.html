@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StreetSkate Shop</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- Cabeçalho -->
     <header>
         <h1>StreetSkate Shop</h1>
 
@@ -18,16 +16,18 @@
             <a href="#">Início</a>
             <a href="#">Profissionais</a>
             <a href="#">Casuais</a>
-            <a href="#">Contato</a>
+            <a href="#contato-secao">Contato</a> 
         </nav>
+
+        <div class="carrinho-container">
+            <span>🛒 Carrinho: <strong id="contador-carrinho">0</strong> itens</span>
+        </div>
     </header>
 
-    <!-- Banner -->
     <section class="banner">
         <h2>Domine as ruas com estilo 🛹</h2>
     </section>
 
-    <!-- Produtos Profissionais -->
     <main>
 
         <section class="container">
@@ -36,86 +36,84 @@
             <div class="produtos">
 
                 <article class="card">
-                    <img 
-                        src="https://i.pinimg.com/736x/08/2a/09/082a09de84c0f07fc16fb608fec6558c.jpg" 
-                        alt="Skate profissional Pro Thunder X"
-                    >
-
+                    <img src="https://i.pinimg.com/736x/08/2a/09/082a09de84c0f07fc16fb608fec6558c.jpg" alt="Skate profissional Pro Thunder X">
                     <h3>Pro Thunder X</h3>
-
                     <p class="price">R$ 799</p>
-
-                    <button class="btn" type="button">
-                        Comprar
-                    </button>
+                    <button class="btn btn-comprar" type="button">Comprar</button>
                 </article>
 
                 <article class="card">
-                    <img 
-                        src="https://http2.mlstatic.com/D_NQ_NP_784866-MLB75789159274_042024-O-skate-montado-feminino-infantil-menina-crianca-skates-lindos.webp" 
-                        alt="Skate Street Master"
-                    >
-
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_784866-MLB75789159274_042024-O-skate-montado-feminino-infantil-menina-crianca-skates-lindos.webp" alt="Skate Street Master">
                     <h3>Street Master</h3>
-
                     <p class="price">R$ 699</p>
-
-                    <button class="btn" type="button">
-                        Comprar
-                    </button>
+                    <button class="btn btn-comprar" type="button">Comprar</button>
                 </article>
 
             </div>
         </section>
 
-        <!-- Produtos Casuais -->
         <section class="container">
-
-            <h2 class="section-title">
-                Skates para Uso Diário
-            </h2>
+            <h2 class="section-title">Skates para Uso Diário</h2>
 
             <div class="produtos">
 
                 <article class="card">
-                    <img 
-                        src="https://cdn.awsli.com.br/591/591154/produto/43544343/697e13219e.jpg" 
-                        alt="Skate Urban Ride"
-                    >
-
+                    <img src="https://cdn.awsli.com.br/591/591154/produto/43544343/697e13219e.jpg" alt="Skate Urban Ride">
                     <h3>Urban Ride</h3>
-
                     <p class="price">R$ 399</p>
-
-                    <button class="btn" type="button">
-                        Comprar
-                    </button>
+                    <button class="btn btn-comprar" type="button">Comprar</button>
                 </article>
 
                 <article class="card">
-                    <img 
-                        src="https://www.espiritooutdoor.com/wp-content/uploads/2015/04/andando-de-skate-em-l-a.jpg" 
-                        alt="Skate Daily Cruiser"
-                    >
-
+                    <img src="https://www.espiritooutdoor.com/wp-content/uploads/2015/04/andando-de-skate-em-l-a.jpg" alt="Skate Daily Cruiser">
                     <h3>Daily Cruiser</h3>
-
                     <p class="price">R$ 349</p>
-
-                    <button class="btn" type="button">
-                        Comprar
-                    </button>
+                    <button class="btn btn-comprar" type="button">Comprar</button>
                 </article>
 
+            </div>
+        </section>
+
+        <section id="contato-secao" class="container">
+            <h2 class="section-title">Entre para a Tribo 🛹</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Cadastre-se para receber novidades e ganhar 10% de desconto na primeira compra!</p>
+            
+            <div class="formulario-wrapper">
+                <form id="formCadastro">
+                    <div class="campo">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" placeholder="Ex: Bob Burnquist">
+                        <span class="msg-erro" id="erro-nome"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Seu Melhor E-mail:</label>
+                        <input type="text" id="email" placeholder="nome@email.com">
+                        <span class="msg-erro" id="erro-email"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="tipoSkate">Estilo Favorito:</label>
+                        <select id="tipoSkate">
+                            <option value="">Selecione...</option>
+                            <option value="street">Street</option>
+                            <option value="vertical">Vertical / Bowl</option>
+                            <option value="cruiser">Cruiser / Longboard</option>
+                        </select>
+                        <span class="msg-erro" id="erro-tipo"></span>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Garantir Meu Desconto</button>
+                </form>
             </div>
         </section>
 
     </main>
 
-    <!-- Rodapé -->
     <footer>
         <p>© 2026 StreetSkate Shop - Todos os direitos reservados</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
