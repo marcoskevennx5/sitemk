@@ -360,4 +360,68 @@ footer {
         transition: none !important;
         scroll-behavior: auto !important;
     }
+
+    /* Estilos extras para o Carrinho no Header */
+.carrinho-container {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Centralização da área do formulário */
+.formulario-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.campo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.campo input, .campo select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Mensagens de Erro do Validador */
+.msg-erro {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Botão de envio */
+.btn-enviar {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #e64a19;
+}
 } 
